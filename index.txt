@@ -1,0 +1,523 @@
+const Discord = require("discord.js");
+const {prefix, token} = require("./config.json");
+const color = require("./color.json");
+const botconfig = require("./botconfig.json");
+const client = new Discord.Client();
+const { RichEmbed} = require("discord.js");
+const bot = new Discord.Client({disableEveryone: true});
+
+client.once("ready", () => {
+    console.log("liz bot ready and reporting for action " )
+})
+
+client.on("message", message => {
+    if (message.member.hasPermission(["KICK_MEMBERS", "BAN_MEMBERS"])) {
+
+        //console.log(message.content);
+
+        if(message.content.startsWith(`${prefix}kick`)) {
+            //message.channel.send("kick")
+
+            let member = message.mentions.members.first();
+            member.kick().then((member) => {
+                message.channel.send(":wave: " + member.displayName + " has been kicked!")
+            })
+        }
+
+    }
+})
+
+client.login(token)
+
+client.on("message", message => {
+    if (message.member.hasPermission(["BAN_MEMBERS"])) {
+
+        //console.log(message.content);
+
+        if(message.content.startsWith(`${prefix}ban`)) {
+            //message.channel.send("ban")
+
+            let member = message.mentions.members.first();
+            member.ban().then((member) => {
+                message.channel.send(":wave: " + member.displayName + " has been banned!")
+            })
+        }
+
+    }
+})
+
+client.login(token)
+
+client.on("message", message => {
+    if (message.member.hasPermission(["ADMINISTRATOR"])) {
+
+        //console.log(message.content);
+
+        if(message.content.startsWith(`${prefix}minecraft`)) {
+            //message.channel.send("minecraft")
+
+                message.channel.send("test")
+                message.channel.send("test")
+                message.channel.send("minecraft 1.14.60.5 apk 64 bit https://www.mediafire.com/file/h75ly9qw5a045z3/MCPE_1.14.60_Official_By_Macmac.apk/file")
+                message.channel.send("minecraft 1.14.60.5 apk 32 bit http://www.mediafire.com/file/nzhw0a1c5825dyq/Minecraft_1.14.60.5.apk/file")
+                message.channel.send("test")
+                message.channel.send("test")
+                message.channel.send("test")
+                message.channel.send("test")
+
+                //console/log(message.content);
+        }
+
+    }
+})
+
+client.login(token)
+
+client.on("message", message => { 
+        //console.log(message.content);
+
+        if(message.content.startsWith(`${prefix}server`)) {
+            //message.channel.send("server")
+
+                message.channel.send("This is GalaxyBe website go check them out http://galaxybe.tk/")
+                message.channel.send("This is GalaxyBe discord go check them out its a pretty chill place https://discord.gg/mM5UUPU")
+                message.channel.send("This is the owner of GalaxyBe paypal every penny helps and it will help support the growth of the server aswell as donating you get lots of cool features and ranks https://paypal.me/pools/c/8pbG97OZar")
+                message.channel.send("https://www.youtube.com/abisgamer This is the link to the owners youtube help him grow and waatch his awsome content:)")
+                //console/log(message.content);
+        }
+})
+
+client.login(token)
+
+
+client.login(token)
+
+client.on("message", message => { 
+    //console.log(message.content);
+
+    if(message.content.startsWith(`${prefix}help page 1`)) {
+        //message.channel.send("help")
+
+            message.channel.send("```List of available commands .help - shows all available commands .ban bans a user must have ban permission .kick kicks a user must have kick or ban permission .server shows GalaxyBe server .minecraft must have administrator permission shows a mcpe apk for every version 32 bit and 64 bit .ping shows if the bot is online or not, .info which tells you about the server and then we have .user which tells the user about themselves then you have .purge which requires you to have manager messages it deletes a amount of messages depending on how much you want. .help page 2 to show other commands fun ones```")
+            //console/log(message.content);
+    }
+})
+
+client.login(token)
+
+client.on("message", message => { 
+    //console.log(message.content);
+
+    if(message.content.startsWith(`${prefix}ping`)) {
+        //message.channel.send("help")
+
+            message.channel.send("```pong!!! bot is online and functional if the bot dosent respond to this that means its offline ```")
+            //console/log(message.content);
+    }
+})
+
+client.login(token)
+
+client.on("message", message => { 
+    //console.log(message.content);
+
+    if(message.content.startsWith(`${prefix}joe`)) {
+        //message.channel.send("help")
+
+            message.channel.send("**JOE MAMA A BOOMER**")
+            //console/log(message.content);
+    }
+})
+
+client.login(token)
+
+client.on("message", message => { 
+    //console.log(message.content);
+
+    if(message.content.startsWith(`${prefix}abis`)) {
+        //message.channel.send("help")
+
+            message.channel.send("Abis is Abis he likes Abissing")
+            //console/log(message.content);
+    }
+})
+
+client.login(token)
+
+client.on("message", message => { 
+    //console.log(message.content);
+
+    if(message.content.startsWith(`${prefix}daddy`)) {
+        //message.channel.send("help")
+
+            message.channel.send("**Man has a child Calm down**")
+            //console/log(message.content);
+    }
+})
+
+client.login(token)
+
+client.on("message", message => { 
+    //console.log(message.content);
+
+    if(message.content.startsWith(`${prefix}jmichaels`)) {
+        //message.channel.send("help")
+
+            message.channel.send("**JMICHAELS IS A BOOMER HE HAS A WIFE AND A CHILD THEREFORE HE IS A BOOMER AND A SIMP AND HE IS ONLY 25 UwU**")
+            //console/log(message.content);
+    }
+})
+
+client.login(token)
+
+client.on("message", message => { 
+    //console.log(message.content);
+
+    if(message.content.startsWith(`${prefix}amine`)) {
+        //message.channel.send("help")
+
+            message.channel.send("**Amine likes begging for his own command so there you go this is it you happy **")
+            //console/log(message.content);
+    }
+})
+
+client.login(token)
+
+client.on("message", message => { 
+    //console.log(message.content);
+
+    if(message.content.startsWith(`${prefix}xero`)) {
+        //message.channel.send("help")
+
+            message.channel.send("**He is Xero and not a HERO**")
+            //console/log(message.content);
+    }
+})
+
+client.login(token)
+
+client.on("message", message => { 
+    //console.log(message.content);
+
+    if(message.content.startsWith(`${prefix}tiktok`)) {
+        //message.channel.send("help")
+
+            message.channel.send("**TikTok is bad rate it 1 star and ruin it **")
+            //console/log(message.content);
+    }
+})
+
+client.login(token)
+
+client.on("message", message => { 
+    //console.log(message.content);
+
+    if(message.content.startsWith(`${prefix}song`)) {
+        //message.channel.send("help")
+
+            message.channel.send("**Lately, I've been, I've been thinking I want you to be happier, I want you to be happier When the morning comes When we see what we've become In the cold light of day, we're a flame in the wind Not the fire that we've begun Every argument, every word we can't take back 'Cause with all that has happened I think that we both know the way that this story ends Then only for a minute I want to change my mind 'Cause this just don't feel right to me I wanna raise your spirits I want to see you smile but Know that means I'll have to leave Know that means I'll have to leave Lately, I've been, I've been thinking I want you to be happier, I want you to be happier When the evening falls And I'm left there with my thoughts And the image of you being with someone else Well, it's eating me up inside But we ran our course, we pretended we're okay Now if we jump together, at least we can swim Far away from the wreck we made Then only for a minute I want to change my mind 'Cause this just don't feel right to me I wanna raise your spirits I want to see you smile but Know that means I'll have to leave Know that means I'll have to leave Lately, I've been, I've been thinking I want you to be happier, I want you to be happier So I'll go, I'll go I will go, go, go So I'll go, I'll go I will go, go, go Lately, I've been, I've been thinking I want you to be happier, I want you to be happier Even though I might not like this I think that you'll be happier, I want you to be happier Then only for a minute (Only for a minute) I want to change my mind 'Cause this just don't feel right to me (Right to me) I wanna raise your spirits (Wanna raise your spirits) I want to see you smile but Know that means I'll have to leave Know that means I'll have to leave Lately, I've been, I've been thinking I want you to be happier, I want you to be happier So I'll go, I'll go I will go, go, go**")
+            //console/log(message.content);
+    }
+})
+
+client.login(token)
+
+client.on("message", message => { 
+    //console.log(message.content);
+
+    if(message.content.startsWith(`${prefix}toxic`)) {
+        //message.channel.send("help")
+
+            message.channel.send("**Toxic do be a salty boi that isnt even a adult and claims to be**")
+            //console/log(message.content);
+    }
+})
+
+client.login(token)
+
+client.on("message", message => { 
+    //console.log(message.content);
+
+    if(message.content.startsWith(`${prefix}kee`)) {
+        //message.channel.send("help")
+
+            message.channel.send("**Who is Kee what is Kee where is Kee why is Kee when is Kee is Kee the key?**")
+            //console/log(message.content);
+    }
+})
+
+client.login(token)
+
+client.on("message", message => { 
+    //console.log(message.content);
+
+    if(message.content.startsWith(`${prefix}help page 2`)) {
+        //message.channel.send("help")
+
+            message.channel.send("```You can use .help page 1 to see the set of commands that arent related to fun but these are the fun commands: .kee, .toxic, .abis, .song, .tiktok, .xero, .amine , .jmichael, .daddy, .joe, .again xero, .hmm, .toxic song, .simp, .anti cheat , .pixel and .virtual```")
+            //console/log(message.content);
+    }
+})
+
+client.login(token)
+
+client.on("message", message => { 
+    //console.log(message.content);
+
+    if(message.content.startsWith(`${prefix}again xero`)) {
+        //message.channel.send("help")
+
+            message.channel.send("```XERO LIKES GODDAMN BREAKING THE BOT```")
+            //console/log(message.content);
+    }
+})
+
+client.login(token)
+
+client.on("message", message => { 
+    //console.log(message.content);
+
+    if(message.content.startsWith(`${prefix}hmm`)) {
+        //message.channel.send("help")
+
+            message.channel.send("```Abis is an abusser he abusses his rank and abusses xero in his basement```")
+            //console/log(message.content);
+    }
+})
+
+client.login(token)
+
+client.on("message", message => { 
+    //console.log(message.content);
+
+    if(message.content.startsWith(`${prefix}foxy`)) {
+        //message.channel.send("help")
+
+            message.channel.send("```THE HEAD DEVELOPER AND SERVER ADMIN OF GalaxyBe HE LIKES TO THINK HE IS ALWAYS RIGHT```")
+            //console/log(message.content);
+    }
+})
+
+client.login(token)
+
+client.on("message", message => { 
+    //console.log(message.content);
+
+    if(message.content.startsWith(`${prefix}liz`)) {
+        //message.channel.send("help")
+
+            message.channel.send("```LIZ A FRIEND OF ABIS WHO MADE THIS BOT AS A JOKE WHO IS KNOW ACTUALLY UPDATING IT ADDING IN NEW FEATURES THIS BOT IS FUN TO CODE AND WILL CARRY ON BEING DEVELOPED ENJOY```")
+            //console/log(message.content);
+    }
+})
+
+client.login(token)
+
+client.on("message", message => { 
+    //console.log(message.content);
+
+    if(message.content.startsWith(`${prefix}toxic song`)) {
+        //message.channel.send("help")
+
+            message.channel.send("This is the song @ItzToxicYT#0737 listens to this is his song he is gay boi https://youtu.be/p8rKJb7i5To")
+            //console/log(message.content);
+    }
+})
+
+client.login(token)
+
+client.on("message", message => { 
+    //console.log(message.content);
+
+    if(message.content.startsWith(`${prefix}simp`)) {
+        //message.channel.send("help")
+
+            message.channel.send("```AbisGamer#6672 is a SIMP he the biggest simp```")
+            //console/log(message.content);
+    }
+})
+
+client.login(token)
+
+client.on("message", message => { 
+    //console.log(message.content);
+
+    if(message.content.startsWith(`${prefix}anti cheat`)) {
+        //message.channel.send("help")
+
+            message.channel.send("**THE ANTICHEAT THE MOST USELESS THING YOU WILL EVER SEE IT DOES EVERYTHING BUT STOP HACKERS AND PEOPLE BREAKING THE RULES IT CRASHES YOU AND KICKS YOU FOR NO REASON IT DELETES YOUR MESSAGES FOR NO REASON IT MUTES YOU FOR NO REASON AND EVERYONE COMPLAINS ABOUT IT REMOVE THE GODDAMN ANTI CHEAT**")
+            //console/log(message.content);
+    }
+})
+
+client.login(token)
+
+client.on("message", message => { 
+    //console.log(message.content);
+
+    if(message.content.startsWith(`${prefix}info`)) {
+        //message.channel.send("help")
+
+            message.channel.send(`Server name: ${message.guild.name}\nTotal members: ${message.guild.memberCount}`)
+            //console/log(message.content);
+    }
+})
+
+client.login(token)
+
+client.on("message", message => { 
+    //console.log(message.content);
+
+    if(message.content.startsWith(`${prefix}user`)) {
+        //message.channel.send("help")
+
+            message.channel.send(`Your Username: ${message.author.username}\nYour ID: ${message.author.id}`)
+            //console/log(message.content);
+    }
+})
+
+client.login(token)
+
+
+client.on("message", message => { 
+    //console.log(message.content);
+
+    if(message.content.startsWith(`${prefix}e`)) {
+        //message.channel.send("help")
+
+            message.channel.send("**EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE**")
+            //console/log(message.content);
+    }
+})
+
+client.login(token)
+
+client.on("message", message => { 
+    //console.log(message.content);
+
+    if(message.content.startsWith(`${prefix}caution`)) {
+        //message.channel.send("help")
+
+            message.channel.send("```CAUTION I AM STILL IN DEVELOPMENT PLEASE DO NOT SPAM ME TO MUCH OTHERWISE I MIGHT BREAK AND I OFTEN GO DOWN IF MY OWNER IS NOT ONLINE I MOST LIKELY AM NOT IF YOU FIND ANY BUGS DM THE OWNER```")
+            //console/log(message.content);
+    }
+})
+
+client.login(token)
+
+client.on("message", message => { 
+    //console.log(message.content);
+
+    if(message.content.startsWith(`${prefix}jazz`)) {
+        //message.channel.send("help")
+
+            message.channel.send("```KAREN IS A SIMP AND A TONTO A VERY BIG ONE AT THAT```")
+            //console/log(message.content);
+    }
+})
+
+client.login(token)
+
+client.on("message", message => { 
+    if (message.member.hasPermission(["MANAGE_MESSAGES"])) {
+    //console.log(message.content);
+
+        let args = message.content.substring(prefix.length).split(" ");
+    
+        if(message.content.startsWith(`${prefix}purge`)) {
+
+            if(!args[1]) return message.reply(`ERROR PLEASE DEFINE THE NUMBER OF MESSAGES YOU WANT TO BE DELETED`)
+                message.channel.bulkDelete(args[1]);
+        }
+    }
+})
+
+client.on("message", message => { 
+    //console.log(message.content);
+
+    if(message.content.startsWith(`${prefix}pixel`)) {
+        //message.channel.send("help")
+
+            message.channel.send("```a minute area of illumination on a display screen, one of many from which an image is composed.```")
+            //console/log(message.content);
+    }
+})
+
+client.login(token)
+
+client.on("message", message => { 
+    //console.log(message.content);
+
+    if(message.content.startsWith(`${prefix}virtual`)) {
+        //message.channel.send("help")
+
+            message.channel.send("```almost or nearly as described, but not completely or according to strict definition. not physically existing as such but made by software to appear to do so.```")
+            //console/log(message.content);
+    }
+})
+
+client.login(token)
+
+const channel = bot.channels.cache.get("715218762990616636");
+process.openStdin().addListener("data", (d) => {
+  channel.send(d.toString().trim());
+});
+
+module.exports = {
+
+    name: "suggest",
+
+  category: "main",
+
+  usage: "<message>",
+
+    description: "suggest anything you wanted to",
+
+    run: async (bot, message, args) => {
+
+    message.delete()
+
+    let suggestion = args.join(" ");
+
+    if (!suggestion)
+
+      return message.channel
+
+        .send(`Please provide a suggestion!`)
+
+        .then(m => m.delete(15000));
+
+        let sChannel = message.guild.channels.find(x => x.name === "suggestions");
+
+        if(!sChannel) return message.channel.send("You dident have channel with name `suggestions`")
+
+        message.channel 
+
+        .send("Your suggestion has been filled to the staff team. Thank you!")
+  
+        .then(m => m.delete(15000));
+  
+      let suggestembed = new RichEmbed()
+  
+        .setFooter(bot.user.username, bot.user.displayAvatarURL)
+  
+        .setTimestamp()
+  
+        .addField(`New Suggestion from:`, `**${message.author.tag}**`)
+  
+        .addField(`Suggestion:`, `${suggestion}\n**Its your choice!**`)
+  
+        .setColor('#ff2052');
+  
+      sChannel.send(suggestembed).then(async msg => {
+  
+        await msg.react("✅");
+  
+        await msg.react("❌");
+  
+      });
+  
+    }
+  
+  };
+
